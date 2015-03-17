@@ -1,16 +1,17 @@
 import javax.swing.*;
 
-public class HelloWorld extends JFrame {
+public class HelloWorld {
     public HelloWorld(String text) {
-        setSize(200, 300);
-        setTitle("Hello World");
+        JFrame window = new JFrame("Hello World");
+        window.setSize(200, 300);
+        window.setTitle("Hello World");
         JButton myButton = new JButton("Click me");
         myButton.setText(text);
-        add(myButton);
-        setVisible(true);
+        window.add(myButton);
+        window.setVisible(true);
     }
 
     public static void main(String[] args) {
-        HelloWorld myHello = new HelloWorld(args[0]);
+        new HelloWorld(args[0]);
     }
 }
